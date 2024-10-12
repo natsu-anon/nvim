@@ -28,6 +28,22 @@ vim.keymap.set("n", "[b", vim.cmd.bprevious, { desc = "Previous buffer" })
 vim.keymap.set("n", "]b", vim.cmd.bnext, { desc = "Next buffer" })
 vim.keymap.set({ "n", "v" }, "<C-c>r", vim.cmd.make, { desc = "Run make" })
 vim.keymap.set("n", "g c", vim.cmd.copen, { desc = "Open the Quicklist" })
+
+-- local fake_isearch = function()
+-- 	local pat = vim.fn.input({
+-- 		prompt = "search: ",
+-- 		default = "",
+-- 		cancelreturn = false,
+-- 	})
+-- 	if false then
+-- 		return
+-- 	end
+-- 	vim.cmd.print(pat)
+-- 	vim.cmd.vimgrep(":vim /" .. pat .. "/jf %")
+-- end
+
+vim.keymap.set("n", "<leader>s", "/", { desc = "discount isearch-forward" })
+vim.keymap.set("n", "<leader>S", "?", { desc = "discount isearch-backward" })
 vim.keymap.set("n", "<C-c>s", ":grep ", { desc = "grep and jump to the first result" })
 
 -- SEE lazy/autocomplete.lua
@@ -74,7 +90,7 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagn
 vim.keymap.set("n", "<C-c>d", vim.diagnostic.open_float, { desc = "Show [D]iagnostic error messages" })
 vim.keymap.set("n", "[q", vim.cmd.cprevious, { desc = "Previous Error/Grep" })
 vim.keymap.set("n", "]q", vim.cmd.cnext, { desc = "Next Error/Grep" })
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+vim.keymap.set("n", "<leader>D", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 vim.keymap.set({ "n", "v" }, "<C-c>q", vim.cmd.copen, { desc = "Open the Quicklist" })
 vim.keymap.set("n", "[l", vim.cmd.lprevious, { desc = "Previous Location" })
 vim.keymap.set("n", "]l", vim.cmd.lnext, { desc = "Next Location" })

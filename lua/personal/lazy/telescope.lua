@@ -145,12 +145,12 @@ return { -- Fuzzy Finder (files, lsp, etc)teles
 		vim.keymap.set("n", "<leader>hk", builtin.keymaps, { desc = "[H]elp [K]eymap" })
 		vim.keymap.set("n", "<leader>tc", builtin.builtin, { desc = "[C]hoose [T]elescope" })
 		vim.keymap.set("n", "<leader>w", builtin.grep_string, { desc = "[S]earch current [W]ord" })
-		vim.keymap.set("n", "<leader>s", builtin.live_grep, { desc = "[S]earch by [G]rep" })
+		vim.keymap.set("n", "<leader>g", builtin.live_grep, { desc = "[S]earch by [G]rep" })
 		vim.keymap.set("n", "<leader>d", builtin.diagnostics, { desc = "search [D]iagnostics" })
 		vim.keymap.set("n", "<leader>T", builtin.resume, { desc = "continue search" })
 		vim.keymap.set("n", "<leader>ts", builtin.treesitter, { desc = "Search [T]reesitter for [S]ymbols" })
-		vim.keymap.set("n", "<leader>tq", builtin.quickfix, { desc = "[S]earch [Q]uickfix" })
-		vim.keymap.set("n", "<leader>tl", builtin.loclist, { desc = "[S]earch [L]oclist" })
+		vim.keymap.set("n", "<leader>q", builtin.quickfix, { desc = "[S]earch [Q]uickfix" })
+		vim.keymap.set("n", "<leader>o", builtin.loclist, { desc = "[S]earch [L]oclist" })
 
 		-- Slightly advanced example of overriding default behavior and theme
 		-- vim.keymap.set("n", "<leader>j", function()
@@ -195,8 +195,8 @@ return { -- Fuzzy Finder (files, lsp, etc)teles
 		-- vim.keymap.set("n", "\\-", file_browser.browse_folders)
 
 		local live_grep_args_shortcuts = require("telescope-live-grep-args.shortcuts")
-		vim.keymap.set("n", "<leader>g", live_grep_args_shortcuts.grep_word_under_cursor)
-		vim.keymap.set("v", "<leader>g", live_grep_args_shortcuts.grep_visual_selection)
+		vim.keymap.set("n", "<leader>G", live_grep_args_shortcuts.grep_word_under_cursor)
+		vim.keymap.set("v", "<leader>G", live_grep_args_shortcuts.grep_visual_selection)
 
 		-- FIXME: bruh just let me enable the preview CMON
 		--
