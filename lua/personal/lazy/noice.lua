@@ -1,4 +1,7 @@
-return {
+-- UPDATE:it does NOT work well with git, unfortunately
+return {}
+
+--[[ return {
 	"folke/noice.nvim",
 	event = "VeryLazy",
 	opts = {},
@@ -68,4 +71,4 @@ return {
 			noice.cmd("history")
 		end)
 	end,
-}
+} ]]
