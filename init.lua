@@ -5,6 +5,6 @@ if vim.fn.filereadable("lua/local/init.lua") == 1 then
 end
 
 -- vim.cmd.colorscheme("monokai-pro-default")
-vim.cmd.colorscheme("rose-pine-main")
+-- vim.cmd.colorscheme("rose-pine-main")
 -- vim.cmd.colorscheme("rose-pine-moon")
--- vim.cmd.colorscheme("rose-pine-dawn")
+vim.cmd.colorscheme("rose-pine-dawn")
