@@ -19,8 +19,8 @@ end)
 vim.keymap.set("n", "<leader>hW", function()
 	quick_help(vim.fn.expand("<cWORD>"))
 end)
-vim.keymap.set({ "n", "v" }, "<C-c>h", ":help ")
-vim.keymap.set("i", "<C-c>h", "<C-o>:help ")
+vim.keymap.set({ "n", "v" }, "<C-x>h", ":help ")
+vim.keymap.set("i", "<C-x>h", "<C-o>:help ")
 -- vim.keymap.set("n", "<leader>hi", ":vert help ")
 -- this is also Emacs but its BRAINGROWTH
 vim.keymap.set("i", "<A-BS>", "<C-o>diw")
@@ -73,8 +73,7 @@ vim.keymap.set("v", "<leader>>", 'c<<C-r>">')
 
 -- interact with system clipboard
 vim.keymap.set("v", "<leader>xy", '"+y')
-vim.keymap.set("v", "<leader>xp", '"+p')
-vim.keymap.set("n", "<leader>xp", '"+p')
+vim.keymap.set({ "n", "v" }, "<leader>xp", '"+p')
 vim.keymap.set("n", "<leader>xP", '"+P')
 
 -- [[ Basic Keymaps ]]
